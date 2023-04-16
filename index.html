@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--form-->
+    <div class="container py-md-4">
+        <label for="productName">product Name:</label>
+        <input type="text" class="form-control mb-md-3 p-1" id="productName">
+
+        <label for="productPrice">product Price:</label>
+        <input type="number" class="form-control mb-md-3 p-md-1" id="productPrice">
+
+        <label for="productCategory">product Category:</label>
+        <input type="text" class="form-control mb-md-3 p-md-1" id="productCategory">
+
+        <label for="productDesc">product Desc:</label>
+        <textarea  id="productDesc" cols="40" class="form-control mb-md-3"></textarea>
+
+        <button type="submit" id="addBtn" onclick="addProduct()" class="btn btn-lg w-100 bg-info py-md-2 d-block ">add product</button>
+        <button type="submit" id="updateBtn" onclick="saveUpdate(temp)" class="btn btn-lg btn-warning w-100 mt-2 d-none">update product</button>
+
+
+    </div>
+
+    <!--display-->
+    <div class="container py-md-4">
+        <input type="text" oninput="searchProduct(this.value)" class="form-control w-75 mx-auto my-md-3" placeholder="Search Product by name..." >
+        <table class="table text-white">
+        <thead>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Desc</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="tableBody">
+    
+        </tbody>
+        </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
